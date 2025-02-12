@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-server
+  config:
+    import: optional:configserver:http://localhost:9000
+#Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,refresh
